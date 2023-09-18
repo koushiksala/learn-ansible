@@ -29,5 +29,10 @@
       vars:
           url: task.example.com
 
+- name: Demo on role level variables
+  hosts: localhost
+  roles:
+     demo
+
 
 
