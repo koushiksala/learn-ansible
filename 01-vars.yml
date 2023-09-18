@@ -10,8 +10,24 @@
   vars:
      url: example.com
   tasks:
-    - name: Print Hello World
+    - name: Print a variable
       ansible.builtin.debug:
         msg: "{{url}}"
+
+- name: Demo on task level variables
+  hosts: localhost
+  vars:
+    url: play.example.com
+  tasks:
+    - name: Print play level variable
+      ansible.builtin.debug:
+        msg: "{{url}}"
+
+    - name: Print task level variable
+      ansible.builtin.debug:
+        msg: "{{url}}"
+      vars:
+          url: task.example.com
+
 
 
