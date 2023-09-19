@@ -18,3 +18,18 @@
     - name: Print free output
       ansible.builtin.debug:
         msg: "{{ used_mem }}"
+
+    - name: Memory Green
+      ansible.builtin.debug:
+        msg: Green
+      when: used_mem | int < 50
+
+    - name: Memory Orange
+      ansible.builtin.debug:
+        msg: Orange
+      when: used_mem | int > 50 and used_mem | int < 70
+
+    - name: Memory Red
+      ansible.builtin.debug:
+        msg: Red
+      when: used_mem | int > 70
