@@ -7,7 +7,7 @@
 
     - name: Set a Fact
       ansible.builtin.set_fact:
-        Free: "{{ free.stdout | split (' ') }}"
+        Free: "{{ free.stdout | split(' ') }}"
 
     - name: Print free variable
       ansible.builtin.set_fact:
