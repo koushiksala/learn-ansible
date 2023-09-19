@@ -34,7 +34,7 @@
 #        msg: Red
 #      when: used_mem | int > 70
 
-- name : Memory Green
+- name: Memory Green
   ansible.builtin.debug:
      msg: Green
   when: ansible_memory_mb["real"]["used"] / ansible_memory_mb["real"]["total"] * 100 < 50
