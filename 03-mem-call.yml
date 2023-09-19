@@ -3,7 +3,7 @@
   tasks:
     - name: Get Memory
       ansible.builtin.shell: free | grep Mem
-      register: Free
+      register: free
 
     - name: Set a Fact
       ansible.builtin.set_fact:
