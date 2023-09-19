@@ -4,6 +4,16 @@
     - name: Get Memory
       ansible.builtin.shell: free | grep Mem
       register: free
+
+    - name: Set a Fact
+      ansible.builtin.set_fact:
+        Free: "{{ free.stdout | split (' ') }}"
+
     - name: Print free variable
+      ansible:builtin:set_fact:
+         total: "{{ FREE[1] }}"
+         free: "{{ FREE[3]  }}"
+
+    - name: Print free output
       ansible.builtin.debug:
-         msg: "{{free.stdout}}"
+        msg: "{{ free| int/total| int }}"
