@@ -1,6 +1,6 @@
-#- name: Print Used memory
-#  hosts: localhost
-#  tasks:
+- name: Print Used memory
+  hosts: localhost
+  tasks:
 #    - name: Get Memory
 #      ansible.builtin.shell: free | grep Mem | xargs
 #      register: free
