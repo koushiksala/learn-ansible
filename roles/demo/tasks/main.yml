@@ -4,6 +4,6 @@
 
 
 - name: Copy File
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: test.txt
     dest: /tmp/test.txt
