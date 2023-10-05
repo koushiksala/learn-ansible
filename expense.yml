@@ -1,0 +1,5 @@
+- name: Expense project set up
+  hosts: localhost
+  become: yes
+  roles:
+    - "{{role_name}}"
